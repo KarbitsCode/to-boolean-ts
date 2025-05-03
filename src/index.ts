@@ -1,28 +1,31 @@
 declare var define: any;
 
-const TRUTHY_VALUES = 'y yes true'.split(/\s/);
+const TRUTHY_VALUES = 'y yes t true'.split(/\s/);
 
 function toBoolean(value: any): boolean {
   // undefined and null are considered falsy values
   if (value === undefined || value === null) {
     return false;
-  }
-
-  value = value.toString();
-  value = value.trim();
-  value = value.toLowerCase();
 
   // Empty string is considered a falsy value
-  if (!value.length) {
+  } else if (typeof value === 'string' && !value.trim().length) {
     return false;
 
   // Any number above zero is considered a truthy value
   } else if (!isNaN(Number(value))) {
     return value > 0;
 
+  // Non-empty array are considered truthy value
+  } else if (Array.isArray(value)) {
+    return value.length > 0;
+
+  // Non-empty object are considered truthy value
+  } else if (typeof value === 'object') {
+    return Object.keys(value).length > 0;
+
   // Any value not marked as a truthy value is automatically falsy
   } else {
-    return TRUTHY_VALUES.includes(value);
+    return TRUTHY_VALUES.includes(value.toString().trim().toLowerCase());
   }
 }
 

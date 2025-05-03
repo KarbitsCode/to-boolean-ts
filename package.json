@@ -1,7 +1,7 @@
 {
   "name": "to-boolean-ts",
-  "version": "1.0.0",
-  "description": "Convert strings to boolean.",
+  "version": "1.0.1",
+  "description": "Convert any value to boolean.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/rafaelrinaldi/to-boolean.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "boolean",
     "string",

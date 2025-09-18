@@ -1,6 +1,6 @@
 declare var define: any;
 
-const TRUTHY_VALUES = 'y yes t true'.split(/\s/);
+const TRUTHY_VALUES = String.prototype.split.call('y yes t true', new RegExp('\\s'));
 
 function toBoolean(value: any): boolean {
   // undefined and null are considered falsy values

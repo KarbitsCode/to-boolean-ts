@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafaelrinaldi/to-boolean.git"
+    "url": "git+https://github.com/KarbitsCode/to-boolean-ts.git"
   },
   "files": [
     "dist"
@@ -24,12 +24,12 @@
     "parse",
     "parser"
   ],
-  "author": "Rafael Rinaldi",
+  "author": "KarbitsCode",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafaelrinaldi/to-boolean/issues"
+    "url": "https://github.com/KarbitsCode/to-boolean-ts/issues"
   },
-  "homepage": "https://github.com/rafaelrinaldi/to-boolean#readme",
+  "homepage": "https://github.com/KarbitsCode/to-boolean-ts#readme",
   "devDependencies": {
     "@types/node": "^24.5.2",
     "@types/tape": "^5.8.1",

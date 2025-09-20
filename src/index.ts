@@ -1,4 +1,6 @@
-declare var define: any;
+declare const define: any;
+
+import typeDetect from "type-detect";
 
 const TRUTHY_VALUES = String.prototype.split.call('y yes t true', new RegExp('\\s'));
 
@@ -8,7 +10,7 @@ function toBoolean(value: any): boolean {
     return false;
 
   // Empty string is considered a falsy value
-  } else if (typeof value === 'string' && !value.trim().length) {
+  } else if (typeDetect(value) === 'string' && !value.trim().length) {
     return false;
 
   // Any number above zero is considered a truthy value
@@ -16,11 +18,11 @@ function toBoolean(value: any): boolean {
     return value > 0;
 
   // Non-empty array are considered truthy value
-  } else if (Array.isArray(value)) {
+  } else if (typeDetect(value) === 'Array' && Array.isArray(value)) {
     return value.length > 0;
 
   // Non-empty object are considered truthy value
-  } else if (typeof value === 'object') {
+  } else if (typeDetect(value) === 'Object') {
     return Object.keys(value).length > 0;
 
   // Any value not marked as a truthy value is automatically falsy

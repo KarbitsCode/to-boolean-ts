@@ -1,6 +1,6 @@
 {
   "name": "to-boolean-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert any value to boolean.",
   "main": "dist/index.js",
   "scripts": {
@@ -31,11 +31,11 @@
   },
   "homepage": "https://github.com/KarbitsCode/to-boolean-ts#readme",
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@types/node": "^25.6.2",
     "@types/tape": "^5.8.1",
     "@types/type-detect": "^4.0.3",
     "tape": "^5.9.0",
-    "typescript": "^5.9.2"
+    "typescript": "^6.0.3"
   },
   "dependencies": {
     "type-detect": "^4.1.0"
